@@ -1,0 +1,31 @@
+<!-- The HTML file for users creating posts-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Post Page</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar with the post.html active -->
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="dishcovery.html">Dishcovery</a>
+      <a href="profile.html">Profile</a>
+      <a href="post.html" class="active">Post</a>
+    </nav>
+
+      <!-- The Post Block -->
+    <main>
+        <section class="post-container">
+          <h2>Create a Post</h2>
+          <textarea id="postContent" placeholder="What dish is on your mind?" rows="5"></textarea>
+          <button onclick="submitPost()">Post</button>
+        </section>
+      </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
