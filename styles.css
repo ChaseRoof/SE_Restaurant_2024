@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.auth-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 100px;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ff6347;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #ff4500;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #ff6347;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #ff4500;
+}
+
+main {
+  margin-top: 80px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  flex: 1;
+}
+
+.review,
+.search-result,
+.user-review {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.review:hover,
+.search-result:hover,
+.user-review:hover {
+  transform: translateY(-5px);
+}
