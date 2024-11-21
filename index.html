@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+    </header>
+    <!-- Login Screen -->
+    <div class="auth-container">
+      <h2>Welcome to Dishcovery</h2>
+      <p>Please log in to continue</p>
+      <input type="text" id="authUsername" placeholder="Username" required />
+      <input
+        type="password"
+        id="authPassword"
+        placeholder="Password"
+        required
+      />
+      <button class="btn-primary" onclick="login()">Log In</button>
+      <p>
+        Don't have an account?
+        <a href="signup.html" onclick="console.log('Sign Up clicked')"
+          >Sign Up</a
+        >
+      </p>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
