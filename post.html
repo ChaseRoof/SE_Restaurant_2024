@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
+
   <body>
     <header class="logo-header">
       <img src="Dishcovery.png" alt="Dishcovery Logo" />
@@ -17,6 +18,7 @@
       <a href="profile.html">Profile</a>
       <a href="post.html" class="active">Post</a>
     </nav>
+
 
     <main>
       <section class="post-container">
@@ -34,6 +36,7 @@
           required
         ></textarea>
 
+
         <!-- Dropdown for Tag Selection -->
         <select id="postTag" required>
           <option value="" disabled selected>Select a tag</option>
@@ -43,9 +46,18 @@
           <option value="desserts">Desserts</option>
           <option value="drinks">Drinks</option>
         </select>
-        <button onclick="submitPost()">Post</button>
-      </section>
+        
+        <button class="uploadButton">
+          <input type="file" id="mediaUpload" accept="image/*,video/*" hidden />
+          <label for="mediaUpload">+</label>
+        </button>
+
+        <button class="postButton" onclick="submitPost()">Post</button>
+        <!--      <button onclick="submitPost()">Post</button    >                  --> 
+        
+        </section>
     </main>
+
 
     <script src="script.js"></script>
   </body>
