@@ -1,3 +1,8 @@
+///////////////////////////////////////////////
+
+
+
+
 
 ////////////////////////////////////////////
 // fetches posts for the profile page
@@ -35,6 +40,45 @@ document.addEventListener('DOMContentLoaded', fetchPosts);
 
 ///////////////////////////////////////////
 
+async function filterPostsByCategory(category) {
+  try {
+      const response = await fetch(`/posts?tag=${category}`);
+      const posts = await response.json();
+
+      const resultsContainer = document.getElementById('resultsContainer');
+      resultsContainer.innerHTML = ''; // Clear previous results
+
+      // Render each post in the results container
+      posts.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.className = 'post-card';
+          postElement.innerHTML = `
+            <div class="postCard">
+            
+              <h3>${post.restaurantName}</h3>
+              <br>
+              <p><strong>Tag:</strong> ${post.tag}</p>
+              <p><strong>Post:</strong> ${post.content}</p>
+         
+              <small>By ${post.author} on ${new Date(post.createdAt).toLocaleDateString()}</small>
+            </div>
+            `;
+          resultsContainer.appendChild(postElement);
+      });
+  } catch (error) {
+      console.error('Error fetching posts:', error);
+  }
+}
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
 // fetches posts for the home page
 document.addEventListener('DOMContentLoaded', fetchAllPosts);
 

@@ -54,6 +54,21 @@ const verifyToken = (req, res, next) => {
 */
 ///////////////////////////////////////////////////////////////////////////////////
 
+// Add this in your server.js or userRoutes.
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+
 app.get('/posts/all', async (req, res) => {
   try {
     const posts = await Post.find().sort({ createdAt: -1 }); // Fetch all posts sorted by newest first
@@ -66,7 +81,16 @@ app.get('/posts/all', async (req, res) => {
 
 
 
-
+app.get('/posts', async (req, res) => {
+  const tag = req.query.tag; // e.g., "Chinese"
+  try {
+      const posts = await Post.find({ tag });
+      res.json(posts);
+  } catch (error) {
+      console.error('Error fetching posts:', error);
+      res.status(500).send('Server Error');
+  }
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////////////

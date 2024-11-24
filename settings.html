@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="home.html" class="active">Home</a>
+        <a href="dishcovery.html">Dishcovery</a>
+        <a href="profile.html">Profile</a>
+        <a href="post.html">Post</a>
+      </nav>
+    <main>
+      <section class="settings-container">
+        <h2>Settings Page</h2>
+        <!--Section to create a container to change password-->
+        <form id="changePasswordForm">
+           <!--User types in current password.-->
+          <label for="oldPassword">Current Password</label>
+          <input type="password" id="oldPassword" placeholder="Enter current password"required />
+          <!--User types in new password password.-->
+          <label for="newPassword">New Password</label>
+          <input type="password" id="newPassword" placeholder="Enter new password" minlength="8" required />
+          <!--User retypes in new password for security.-->
+          <label for="confirmPassword">Confirm New Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm new password" required/>
+          <button type="button" onclick="changePassword()">Confirm</button>
+        </form>
+      </section>
+    </main>
+    <!-- Include JavaScript for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
