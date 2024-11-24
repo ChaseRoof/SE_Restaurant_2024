@@ -80,6 +80,7 @@ async function filterPostsByCategory(category) {
 
 /////////////////////////////////////////////////
 // fetches posts for the home page
+
 document.addEventListener('DOMContentLoaded', fetchAllPosts);
 
 function fetchAllPosts() {
@@ -138,7 +139,6 @@ function fetchAllPosts() {
       console.error('Error fetching posts:', error);
     });
 }
-
 
 /////////////////////////////////////////////
 
@@ -449,14 +449,11 @@ function filterPostsByTag(tag) {
   }
 }
 
+/*
+
 function likeThePost(index) {
   const loggedInUser = localStorage.getItem("loggedInUser");
- /*
-  if (!loggedInUser) {
-    alert("You must be logged in to like or dislike posts.");
-    return;
-  }
-    */
+ 
   const posts = JSON.parse(localStorage.getItem("posts") || "[]");
   const userInteractions = JSON.parse(
     localStorage.getItem("userInteractions") || "{}"
@@ -484,15 +481,110 @@ function likeThePost(index) {
   localStorage.setItem("userInteractions", JSON.stringify(userInteractions));
   loadPosts();
 }
+*/
 
-function dislikeThePost(index) {
+function likeThePost(index) {
   const loggedInUser = localStorage.getItem("loggedInUser");
- /*
+
   if (!loggedInUser) {
     alert("You must be logged in to like or dislike posts.");
     return;
   }
-    */
+
+  const posts = JSON.parse(localStorage.getItem("posts") || "[]");
+  const userInteractions = JSON.parse(
+    localStorage.getItem("userInteractions") || "{}"
+  );
+
+  // Initialize user interaction for this user if not already done
+  if (!userInteractions[loggedInUser]) userInteractions[loggedInUser] = {};
+  const interaction = userInteractions[loggedInUser][index];
+
+  // Toggle like and update post likes count
+  if (interaction === "like") {
+    posts[index].likes = (posts[index].likes || 1) - 1;
+    delete userInteractions[loggedInUser][index]; // Remove like
+  } else {
+    if (interaction === "dislike") {
+      posts[index].dislikes = (posts[index].dislikes || 1) - 1;
+    }
+    posts[index].likes = (posts[index].likes || 0) + 1;
+    userInteractions[loggedInUser][index] = "like";
+  }
+
+  // Save updates to localStorage
+  localStorage.setItem("posts", JSON.stringify(posts));
+  localStorage.setItem("userInteractions", JSON.stringify(userInteractions));
+
+  // Update the UI for the specific post
+  updatePostUI(index, posts[index]);
+}
+
+
+function dislikeThePost(index) {
+  const loggedInUser = localStorage.getItem("loggedInUser");
+
+  if (!loggedInUser) {
+    alert("You must be logged in to like or dislike posts.");
+    return;
+  }
+
+  const posts = JSON.parse(localStorage.getItem("posts") || "[]");
+  const userInteractions = JSON.parse(
+    localStorage.getItem("userInteractions") || "{}"
+  );
+
+  // Initialize user interaction for this user if not already done
+  if (!userInteractions[loggedInUser]) userInteractions[loggedInUser] = {};
+  const interaction = userInteractions[loggedInUser][index];
+
+  // Toggle dislike and update post dislikes count
+  if (interaction === "dislike") {
+    posts[index].dislikes = (posts[index].dislikes || 1) - 1;
+    delete userInteractions[loggedInUser][index]; // Remove dislike
+  } else {
+    if (interaction === "like") {
+      posts[index].likes = (posts[index].likes || 1) - 1;
+    }
+    posts[index].dislikes = (posts[index].dislikes || 0) + 1;
+    userInteractions[loggedInUser][index] = "dislike";
+  }
+
+  // Save updates to localStorage
+  localStorage.setItem("posts", JSON.stringify(posts));
+  localStorage.setItem("userInteractions", JSON.stringify(userInteractions));
+
+  // Update the UI for the specific post
+  updatePostUI(index, posts[index]);
+}
+
+
+
+function updatePostUI(index, post) {
+  // Get the post card element by index
+  const postsContainer = document.getElementById("HomePostsContainer");
+  const postCard = postsContainer.children[index]; // Assumes posts are rendered in order
+
+  if (postCard) {
+    const likeButton = postCard.querySelector(".thumb-controls button:first-child span");
+    const dislikeButton = postCard.querySelector(".thumb-controls button:last-child span");
+
+    // Update likes and dislikes count
+    likeButton.textContent = post.likes;
+    dislikeButton.textContent = post.dislikes || 0;
+  }
+}
+
+
+/*
+function dislikeThePost(index) {
+  const loggedInUser = localStorage.getItem("loggedInUser");
+ 
+  if (!loggedInUser) {
+    alert("You must be logged in to like or dislike posts.");
+    return;
+  }
+    
 
   const posts = JSON.parse(localStorage.getItem("posts") || "[]");
   const userInteractions = JSON.parse(
@@ -526,3 +618,4 @@ function dislikeThePost(index) {
 
 
 }
+*/
