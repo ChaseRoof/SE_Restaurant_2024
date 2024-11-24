@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="profile">
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+      <a href="settings.html" class="settings-link">
+        <img src="settings.png" alt="Settings" class="settings-icon" />
+      </a>
+    </header>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="dishcovery.html">Dishcovery</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="post.html">Post</a>
+    </nav>
+
+    <main>
+       <!--Display users user name and profile, replacing the users name next to Profile for a stylistic touch.-->
+      <section id="profile">
+        <h2> <span id="prof-username"></span>'s Profile</h2>
+        <!--User's username displays here-->
+        <p><strong>Username: </strong><span id="username"></span></p>
+        <!--User's email displays here-->
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <div class="profile-signout">
+          <button class="btn-signout" onclick="signOut()">Sign Out</button>
+        </div>
+        <h3>Your Reviews</h3>
+        <div id="userReviews">
+          <!-- User's posts will be dynamically loaded here -->
+        </div>
+        
+      </section>
+
+      
+    </main>
+    <!-- Include JavaScript for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>

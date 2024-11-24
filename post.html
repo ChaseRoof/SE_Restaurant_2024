@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Post Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+      <a href="settings.html" class="settings-link">
+        <img src="settings.png" alt="Settings" class="settings-icon" />
+      </a>
+    </header>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="dishcovery.html">Dishcovery</a>
+      <a href="profile.html">Profile</a>
+      <a href="post.html" class="active">Post</a>
+    </nav>
+
+    <main>
+      <!--Section for the post page-->
+      <section class="post-container">
+        <!--Can type a restaurant name with minimum 1 character and maximum 50 characters.-->
+        <h2>Create A Post</h2>
+        <input id="restaurantName" type="text" placeholder="Restaurant Name" minlength="1" maxlength="50" required />
+        <textarea
+          id="postContent" placeholder="What dish is on your mind?" maxlength="300" minlength="1" rows="5" required
+        ></textarea>
+
+        <!--Container to hold the uplaod,tag, and media buttons, from left to right-->
+        <div class="buttonContainer">
+          <button class="tagButton" onclick="openTagsPopup()">Tags</button>
+          <button class="uploadButton">
+            <input type="file" id="mediaUpload" accept="image/*,video/*" hidden />
+            <label for="mediaUpload">+</label>
+          </button>
+          <button class="postButton" onclick="submitPost()">Post</button>
+        </div>
+        
+        <div id="mediaPreview" class="media-preview hidden"></div>
+      
+    <!-- Include JavaScript for functionality -->     
+    <script src="script.js"></script>
+  </body>
+</html>
