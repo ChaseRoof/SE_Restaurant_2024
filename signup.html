@@ -5,12 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dishcovery - Sign Up</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Background video styling */
+      #backgroundVideo {
+        position: fixed; /* Stays fixed in the viewport */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* Ensures the video fills the screen */
+        z-index: -1; /* Places the video behind other elements */
+        image-rendering: auto; /* Avoid pixelation */
+      }
+
+      /* Dark gray overlay for the video */
+      .video-overlay {
+        position: fixed; /* Stays fixed in the viewport, like the video */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent gray */
+        z-index: 0; /* Sits above the video but below other content */
+      }
+
+      /* Additional adjustments for the auth-container */
+      .auth-container {
+        position: relative; /* Keeps the container above the video and overlay */
+        z-index: 1;
+        background: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Make the box more translucent */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .auth-container h2 {
+        color: #e83100; /* Keep the vibrant red for contrast */
+      }
+
+      .auth-container p,
+      .auth-container a,
+      .auth-container input,
+      .auth-container button {
+        color: #2d4628; /* Ensure good contrast on the translucent background */
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Background Video -->
+    <video id="backgroundVideo" autoplay muted loop>
+      <source src="Dishcovery.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Header -->
     <header class="logo-header">
       <img src="Dishcovery.png" alt="Dishcovery Logo" />
     </header>
+
     <!-- Signup Screen -->
     <div class="auth-container">
       <h2>Create Your Account</h2>
@@ -26,6 +87,10 @@
       />
       <button class="btn-primary" onclick="signup()">Sign Up</button>
       <p>Already Have an Account? <a href="index.html">Log In</a></p>
+    </div>
+    <!-- Slogan Section -->
+    <div class="slogan">
+      <p id="typewriter">When You Can't Decide, Dishcover</p>
     </div>
 
     <!-- Include JavaScript -->
