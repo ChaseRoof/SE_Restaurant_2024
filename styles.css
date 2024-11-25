@@ -591,3 +591,14 @@ main {
     border-color: transparent; /* Hides cursor briefly */
   }
 }
+
+/* Dark gray overlay for the video */
+.video-overlay {
+  position: fixed; /* Stays fixed in the viewport, like the video */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent gray */
+  z-index: 0; /* Sits above the video but below other content */
+}
