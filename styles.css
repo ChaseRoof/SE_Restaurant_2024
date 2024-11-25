@@ -265,6 +265,7 @@ main {
   background-color: #ff6933;
   color: white;
   border: none;
+  margin-left: 450px;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
