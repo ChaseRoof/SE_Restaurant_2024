@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Post Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+    </header>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="dishcovery.html">Dishcovery</a>
+      <a href="profile.html">Profile</a>
+      <a href="post.html" class="active">Post</a>
+    </nav>
+
+
+    <main>
+      <section class="post-container">
+        <h2>Create a Post</h2>
+        <input
+          id="restaurantName"
+          type="text"
+          placeholder="Restaurant Name"
+          required
+        />
+        <textarea
+          id="postContent"
+          placeholder="What dish is on your mind?"
+          rows="5"
+          required
+        ></textarea>
+
+
+        <!-- Dropdown for Tag Selection -->
+        <select id="postTag" required>
+          <option value="" disabled selected>Select a tag</option>
+          <option value="American">American</option>
+          <option value="Italian">Italian</option>
+          <option value="Korean">Korean</option>
+          <option value="Indian">Indian</option>
+          <option value="Mediterranean">Mediterranean</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Fast Food">Fast Food</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Thai">Thai</option> <!-- Doesnt work-->
+          <option value="Latin-American">Latin American</option>
+          <option value="Desserts">Desserts</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Burgers">Burgers</option>
+          <option value="Sushi">Sushi</option>
+          <option value="Soul Food">Soul Food</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Gluten-Free">Gluten-Free</option>
+          <option value="Drinks">Drinks</option>
+        </select>
+        
+        <button class="uploadButton">
+          <input type="file" id="mediaUpload" accept="image/*,video/*" hidden />
+          <label for="mediaUpload">+</label>
+        </button>
+
+        <button class="postButton" onclick="submitPost()">Post</button>
+        <!--      <button onclick="submitPost()">Post</button    >                  --> 
+        
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

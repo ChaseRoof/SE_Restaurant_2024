@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+      <a href="settings.html" class="settings-link">
+        <img src="settings.png" alt="Settings" class="settings-icon" />
+      </a>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="home.html" class="active">Home</a>
+      <a href="dishcovery.html">Dishcovery</a>
+      <a href="profile.html">Profile</a>
+      <a href="post.html">Post</a>
+    </nav>
+
+    <!-- Main Content: Yik Yak-style Reviews Feed -->
+    <main>
+      <section id="reviews">
+        <h2>Recent Reviews</h2>
+        <div id="HomePostsContainer"></div>
+        <!-- Reviews will be dynamically loaded here -->
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
