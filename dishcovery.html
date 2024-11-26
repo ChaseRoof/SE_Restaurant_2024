@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishcovery - Search by Tags</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="logo-header">
+      <img src="Dishcovery.png" alt="Dishcovery Logo" />
+    </header>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="dishcovery.html" class="active">Dishcovery</a>
+      <a href="profile.html">Profile</a>
+      <a href="post.html">Post</a>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Search by Category</h2>
+        <!--Section to display the category cards for the dishcovery page.-->
+        <div class="categories-container">
+          <!--These category cards are separated by food genre.-->
+          <div class="category-card" onclick="filterPostsByCategory('American')">
+            <img src="American-Food.jpeg" alt="American Food" />
+            <span class="category-text">American</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Italian')">
+            <img src="Italian-Food.jpg" alt="Italian Food" />
+            <span class="category-text">Italian</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Korean')">
+            <img src="Korean-Food.png" alt="Korean Food" />
+            <span class="category-text">Korean</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Indian')">
+            <img src="Indian-Food.jpg" alt="Indian Food" />
+            <span class="category-text">Indian</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Mediterranean')">
+            <img src="Med-Food.jpg" alt="Mediterranean Food" />
+            <span class="category-text">Mediterranean</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Japanese')">
+            <img src="Japanese-Food.avif" alt="Japanese Food" />
+            <span class="category-text">Japanese</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Fast Food')">
+            <img src="Fast-Food.webp" alt="Fast Food" />
+            <span class="category-text">Fast Food</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Vegan')">
+            <img src="Vegan-Food.jpg" alt="Vegan" />
+            <span class="category-text">Vegan</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Thai')">
+            <img src="Thai-Food.jpeg" alt="ThaiFood" />
+            <span class="category-text">Thai</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Desserts')">
+            <img src="Desserts-Food.jpg" alt="Desserts" />
+            <span class="category-text">Desserts</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Latin-American')">
+            <img src="Latin-American.webp" alt="Latin-American" />
+            <span class="category-text">Latin-American</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Drinks')">
+            <img src="Drinks.webp" alt="Drinks" />
+            <span class="category-text">Drinks</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Soul Food')">
+            <img src="Soul-Food.jpg" alt="Soul Food" />
+            <span class="category-text">Soul Food</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Chinese')">
+            <img src="Chinese-Food.jpg" alt="Chinese" />
+            <span class="category-text">Chinese</span>
+          </div>
+          <div class="category-card" onclick="filterPostsByCategory('Gluten-Free')">
+            <img src="Gluten-Free.webp" alt="Gluten-Free" />
+            <span class="category-text">Gluten-Free</span>
+          </div>
+          <!-- Can add more categories here -->
+        </div>
+        <h2>Results</h2>
+        <div id="resultsContainer">
+          <!-- Filtered posts will appear here -->
+        </div>
+      </section>
+    </main>
+    <!-- Include JavaScript for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
