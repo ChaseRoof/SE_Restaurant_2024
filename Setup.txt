@@ -1,0 +1,2 @@
+Make sure to install any neccesary modules and set up the folder
+before trying to run.
