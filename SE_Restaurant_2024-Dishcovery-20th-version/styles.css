@@ -1,0 +1,649 @@
+/*CSS code for necessary styling of the Dishcovery website. */
+
+/*Reset the margin, padding, and the box-sizing all-around.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The styling for the body which provided clarity to overrall layout.*/
+body {
+  /*Using the installed font Proxima Nova throughout whole website for consistency.*/
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fad074;
+  background-image:
+  linear-gradient(
+    rgba(255, 255, 255, 0.4), /* Light white/cream tint */
+    rgba(255, 255, 255, 0.4) 
+  ), url('backing.png');
+  background-size: contain;
+  color: #2d4628;
+  display: flex;
+  flex-direction: column; /*Elements will be stacked vertically.*/
+  align-items: center;
+  min-height: 100vh; /*The min height ia at least the full viewport of the height.*/
+  width: 100%;
+  padding-top: 200px; /*Now adding padding for the fixed header.*/
+  overflow-y: auto; /*Able to scroll vertically.*/
+}
+.highlight {
+  background-color: rgba(255, 255, 255, 0.499);  /* Light yellow background */
+  color: #2d4628;                             /* Text color */
+  font-weight: bold;                        /* Make the text bold */
+  padding: 0.2em;                           /* Add some space around the text */
+  border-radius: 5px;                       /* Optional: Round the corners */
+}
+
+
+/*For the logo header to be displayed.*/
+.logo-header {
+  position: relative;
+  display: flex;
+  justify-content: center; /*Center the logo*/
+  align-items: center; /*Vertically Alignn it.*/
+  background-color: #ff6933;
+  padding: 5px 0; /*Make the header smaller*/
+  width: 100%; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Position doesn't move*/
+  top: 0;
+  z-index: 1000;
+}
+
+/*For the image in the header.*/
+.logo-header img {
+  height: 125px; /*The logo image is to be this large.*/
+  width: auto;
+  max-width: 300px; /* Make sure image isn't stretched.*/
+}
+
+/*The Containers for the Sign-up/Login.*/
+.auth-container {
+  /*Same font throughout*/
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  padding: 40px; /*Space around the containers */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /*Center the text.*/
+  width: 90%;
+  position: relative; /*Let's the position shift a bit with page movement.*/
+  max-width: 400px;
+  margin-top: 100px;
+  bottom: 100px;
+}
+
+/*For the Heading's in the containers.*/
+.auth-container h2 {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #e83100;
+}
+
+/*For the input fields in the sign-up/login containers*/
+.auth-container input {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffa570; /* Soft Orange */
+  font-size: 1rem;
+  background-color: #fad074; /* Light Yellow */
+}
+
+/*For the buttons*/
+.auth-container button {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6933;
+  margin-top: 5px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*For the button hover.*/
+.auth-container button:hover {
+  background-color: #e83100; /* Bright Red */
+}
+
+/*The container for the users posts*/
+.post-container {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  padding: 40px; /*Situate padding within (inner).*/
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 100px;
+}
+
+/*For the Header within the Post Container aka "Create a Post"*/
+.post-container h2 {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #e83100;
+}
+
+/*For the input fields of the post container.*/
+.post-container textarea {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffa570; /*A softer orange.*/
+  font-size: 1rem;
+  background-color: #fad074;
+  resize: none; /*Do not allow.*/
+  text-align: center; /*Center the text.*/
+}
+
+/*Block so that the post container is centered in the middle of the page perfectly.*/
+.post-container {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  top: 50%; /*Make sure it is centered perfectly horizontally and vertically.*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Styling for the restaurant input field.*/
+.post-container input {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffa570;
+  font-size: 1rem;
+  background-color: #fad074;
+}
+
+/*For the navigation bar at the bottom of the screen instead of top.*/
+.navbar {
+  display: flex;
+  justify-content: space-around; /*Have equal spacing.*/
+  width: 100%;
+  background-color: #ff6933;
+  padding: 15px 0;
+  position: fixed; /*Make sure that the bar at the bottom doesn't move whatsoever.*/
+  bottom: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*For the Links within Navigation Bar.*/
+.navbar a {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-decoration: none; /*Don't allow text decoration.*/
+  font-size: 1rem;
+  padding: 8px 15px; /*Allow padding within the links.*/
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/*For the active links and the hover of the links.*/
+.navbar a:hover,
+.navbar a.active {
+  background-color: #e83100;
+}
+
+/*Styling for the main section */
+main {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 80px; /*Adds spacing to separate it from the content above.*/
+  padding: 20px; /*Add padding for inner spacing.*/
+  max-width: 800px;
+  width: 200%;
+}
+
+/*For the reviews on the user profile.*/
+.postCard,
+.review,
+.search-result,
+.user-review {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden; /* Prevent any overflow of content. */
+}
+
+/*Don't allow for the hover affect on these.*/
+.review:hover,
+.search-result:hover,
+.user-review:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*Keep the shadow.*/
+}
+
+/* Controls for the thumbs up and thumbs down.*/
+.thumb-controls {
+  display: flex; /*Align them horizontally. */
+  justify-content: space-around; /*Even space between buttons.*/
+  margin-top: 10px;
+}
+
+/*More thumb controls.*/
+.thumb-controls button {
+  background-color: transparent; /*Make sure there is not background color*/
+  border: none; /*No border to keep the emoji's conistent*/
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #e83100;
+  transition: color 0.3s ease;
+}
+
+/*The hovering of the thumb control.s*/
+.thumb-controls button:hover {
+  color: #2d4628; /*Is a dark green color consistent with theme.*/
+}
+
+/* Align Profile Actions */
+.profile-signout {
+  display: flex;
+  justify-content: flex-end; /* Move the sign out button to right so user can click it easily.*/
+  /* Add necessary space between user info and the button*/
+  margin-right: 160px;
+}
+
+/*For the sign out button again. */
+.btn-signout {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px 20px;
+  background-color: #ff6933;
+  color: white;
+  border: none;
+  margin-left: 500px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* For the sign out hover. A Red.*/
+.btn-signout:hover {
+  background-color: #e83100;
+}
+
+/*To hide necesary elements*/
+.hidden {
+  display: none;
+}
+
+/*Change the text in the input fields to a lighter grey for aesthetics. */
+::placeholder {
+  color: rgba(0, 0, 0, 0.297);
+}
+
+/* Styling for the button container on the posts page. Tag, Upload, and Post.*/
+.buttonContainer {
+  display: flex;
+  justify-content: space-between; /*Put space between the buttons*/
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Styling so that the dropdown tagslooks like button.*/
+#postTag {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 42%; /*Let's match the width of the post button so buttons are even*/
+  text-align: center;
+  padding: 12px;
+  background-color: #ff6933; 
+  color: white; 
+  border: none;
+  border-radius: 8px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  appearance: none; /*Removes how the default dropdown button looks. */
+}
+
+/*This adds padding so the tags in the dropdown don't overlap. */
+#postTag {
+  padding-right: 30px;
+}
+
+/*Make a specific dropdown arrow.*/
+#postTag::after {
+  content: '▼'; /* Down arrow is added. */
+  position: absolute;
+  right: 10px; /*Place the arrow to the right.*/
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  color: white;
+}
+
+/*Hover for the postTag*/
+#postTag:hover {
+  background-color: #e83100; 
+}
+
+/*Specific options for the dropdown.*/
+#postTag option {
+  background-color: white; 
+  color: black; 
+}
+
+
+/*For individual upload button in the buttoncontainer.*/
+.uploadButton {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 12%;
+  text-align: center;
+  padding: 12px;
+  background-color: #ff6933;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*For the upload button hover.*/
+.uploadButton:hover {
+  background-color: #e83100;
+}
+
+/*For individual post button in the buttoncontainer.*/
+.postButton {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  width: 42%;
+  text-align: center;
+  padding: 12px;
+  background-color: #ff6933;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*For the post button hover.*/
+.postButton:hover {
+  background-color: #e83100;
+}
+
+/* For the Media Container */
+.mediaPreview {
+  margin-top: 15px; /* Add needed spacing above the media.*/
+  text-align: center;
+}
+
+/* Styles the images and videos of the media preview. */
+.media-preview img,
+.media-preview video {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 15px; /*Add rounded corners to the images and videos to aesthetics.*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.settings-icon {
+  width: 40px !important;
+  height: 40px !important;
+  position: fixed; 
+  right: 60px; 
+  margin-top: 75px;
+}
+
+
+/* Add a circular hover to the icon because squared wouldn't look nice.*/
+.settings-icon:hover {
+  background-color: #e83100;
+  border-radius: 50%; /*Makes the circular effect. */
+}
+
+/*Setting the links position.*/
+.settings-link {
+  position: absolute;
+  top: 5px; /* Position closer to the right edge */
+  cursor: pointer;
+  margin-left: 1350px;
+}
+
+/*Styling for the reset password and forgot password containers.*/
+.settings-container,
+.reset-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto; /*Vertically center them.*/
+}
+
+/*For the headings of both of these containers.*/
+.settings-container h2,
+.reset-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #e83100;
+}
+
+/* For the input fields of both of the containers. */
+.settings-container input,
+.reset-container input {
+  width: 100%;
+  padding: 12px; /*Add inner spacing.*/
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffa570; /*A softer orange.*/
+  font-size: 1rem;
+  background-color: #fad074;
+}
+
+/* For the buttons of both of these containers. */
+.settings-container button,
+.reset-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6933;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*For the button hovers of both of these containers.*/
+.settings-container button:hover,
+.reset-container button:hover {
+  background-color: #e83100;
+}
+
+/*For the category containers on dishcovery page.*/
+.categories-container {
+  display: flex; /* Align the card horizontally.*/
+  gap: 20px;
+  overflow-x: auto; /*Enables scrolling horizontally so it looks nice.*/
+  padding: 10px;
+  white-space: nowrap;
+}
+
+/*For the indivdual styling of the categories.*/
+.category-card {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  flex: 0 0 auto; /* Stops cards from shrinking or stretching.*/
+  width: 200px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* For the images of the category cards.*/
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*Keeps the size of the images when changing them to cards.*/
+}
+
+/*Putting text on top of the images for the category cards.*/
+.category-card .category-text {
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 50%; /* Center horizontally and vertically.*/
+  left: 50%;
+  transform: translate(-50%, -50%); /* To achieve even better centering.*/
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Creates an enlarging of the cards so it has a clean feel.*/
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+/* For the results container.*/
+#resultsContainer {
+  margin-top: 20px;
+}
+
+/*To create styling for the media in posts and previews.*/
+.media-preview img,
+.media-preview video,
+.post-media img,
+.post-media video {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 15px; /*Rounds the corners of the media.*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* For the media posts*/
+.post-media {
+  margin-top: 10px;
+  text-align: center;
+  max-width: 75%; /*Make sure the media fits within the posts.*/
+  border-radius: 15px; /*Ensure the corners are rounded to create a softness.*/
+  margin-left: 70px;
+}
+
+/*For the media of the video and images.*/
+.post-media img,
+.post-media video {
+  max-width: 100%; /*Make sure the media fits within the posts.*/
+  max-height: 300px;
+  border-radius: 15px; /*Ensure the corners are rounded to create a softness.*/
+  margin-left: 30px;
+}
+
+#backgroundVideo {
+  position: fixed; /* Stays fixed in the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video fills the screen */
+  z-index: -1; /* Places the video behind other elements */
+  image-rendering: auto; /* Avoid pixelation */
+}
+
+/* Ensure other elements are visible on top of the video */
+.auth-container {
+  position: relative; /* Keeps the container above the video */
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8); /* Make the box more translucent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Adjust the text inside the box for better visibility */
+.auth-container h2 {
+  color: #e83100; /* Keep the vibrant red for contrast */
+}
+
+.auth-container p,
+.auth-container a,
+.auth-container input,
+.auth-container button {
+  color: #2d4628; /* Ensure good contrast on the translucent background */
+}
+
+#typewriter {
+  position: relative;
+  bottom: 20px; /* Adjust distance from login box */
+  text-align: center;
+  font-size: 2.5rem; /* Large and prominent */
+  font-family: "Playfair Display", serif; /* Elegant font */
+  color: rgba(255, 255, 255, 0.85); /* White with slight translucency */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+  font-weight: bold;
+  margin-top: 30px; /* Additional spacing */
+  display: inline-block; /* Required for cursor */
+  overflow: hidden; /* Ensures text is hidden during typing */
+  white-space: nowrap; /* Prevents wrapping of text */
+  border-right: 2px solid rgba(255, 255, 255, 0.85); /* Adds a blinking cursor effect */
+  animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing + blinking cursor */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Fully type the text */
+  }
+}
+
+/* Cursor blinking animation */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Hides cursor briefly */
+  }
+}
+
+/* Dark gray overlay for the video */
+.video-overlay {
+  position: fixed; /* Stays fixed in the viewport, like the video */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent gray */
+  z-index: 0; /* Sits above the video but below other content */
+}
