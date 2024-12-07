@@ -9,6 +9,9 @@ const Post = require("./models/Post"); // import user model
 
 const jwt = require("jsonwebtoken"); // Ensure you have the JWT library
 
+const MONGO_URI = process.env.MONGO_URI;
+const JWT_SECRET = process.env.JWT_SECRET;
+
 const app = express();
 const PORT = 3000; // You can change this to any port you prefer
 
@@ -18,8 +21,7 @@ app.use(express.json());
 //Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://torsarahman31:j37fWv5a9xczUP@cluster0.2hqi1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {
+    MONGO_URI,    {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     }
@@ -123,7 +125,7 @@ app.post("/login", async (req, res) => {
     };
 
     // Sign the JWT token (expires in 1 hour)
-    const token = jwt.sign(payload, "0831", { expiresIn: "1h" });
+    const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h" });
 
     // Respond with the token
     res.json({ success: true, message: "Login successful", token });
@@ -141,7 +143,7 @@ function authenticateToken(req, res, next) {
   if (!token)
     return res.status(401).json({ success: false, message: "Token required" });
 
-  jwt.verify(token, "0831", (err, user) => {
+  jwt.verify(token, JWT_SECRET, (err, user) => {
     if (err)
       return res.status(403).json({ success: false, message: "Invalid token" });
 
