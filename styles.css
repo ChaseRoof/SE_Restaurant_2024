@@ -31,7 +31,7 @@ body {
   align-items: center; /*Vertically Alignn it.*/
   background-color: #ff6933;
   padding: 5px 0; /*Make the header smaller*/
-  width: 100%;
+  width: 100%; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: fixed; /* Position doesn't move*/
   top: 0;
@@ -393,14 +393,15 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*Adjust the size of the settings icon*/
+
 .settings-icon {
-  height: 40px !important; /* Make the height and width smaller by restricting.*/
   width: 40px !important;
-  max-width: 40px !important; /*Make sure the icon doesn't stretch.*/
-  transition: background-color 0.3s ease;
+  height: 40px !important;
+  position: fixed; 
+  right: 60px; 
   margin-top: 75px;
 }
+
 
 /* Add a circular hover to the icon because squared wouldn't look nice.*/
 .settings-icon:hover {
