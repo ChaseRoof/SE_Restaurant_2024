@@ -9,8 +9,8 @@ Chase Garner, Torsa Rahman (Backend Developers),
 Katelyn Fernandes, Hiba Ayub (Documentation),
 Jocelyn Pineda, Myonni Bailey (Frontend Developers)
 
-- Contact Us: katelynfernandes0@gmail.com, 
-  hibaayub04@gmail.com, jp11455@uga.edu, myonnibailey@gmail.com, Chase.Garner@uga.edu, Torsarahman31@gmail.com
+### Contact Us: 
+katelynfernandes0@gmail.com, hibaayub04@gmail.com, jp11455@uga.edu, myonnibailey@gmail.com, Chase.Garner@uga.edu, Torsarahman31@gmail.com
 
 
 ---
