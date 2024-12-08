@@ -3,8 +3,8 @@
 A web-based application that allows users to share, view, and interact with restaurant reviews. Users can create posts, like or dislike reviews, filter reviews by tags, and manage their accounts securely.
 
 
-## Team Name: Syntax Error
-## Group Members: Chase Garner, Torsa Rahman, Katelyn Fernandes, Hiba Ayub, Jocelyn Pineda, Myonni Bailey
+### Team Name: Syntax Error
+### Group Members: Chase Garner, Torsa Rahman, Katelyn Fernandes, Hiba Ayub, Jocelyn Pineda, Myonni Bailey
 
 - Contact Us: katelynfernandes0@gmail.com
 
@@ -48,7 +48,7 @@ A web-based application that allows users to share, view, and interact with rest
 
 # How to Run
 
-- Clone the repository: git clone link*******
+- Clone the repository: git clone https://github.com/ChaseRoof/SE_Restaurant_2024.git
 - Download any necessary packages: npm install
 - Configure the environment variables in .env file: (Confidential; contact contributors for access)
 - Start backend: node server.js
