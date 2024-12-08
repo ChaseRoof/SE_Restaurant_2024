@@ -4,7 +4,7 @@ A web-based application that allows users to share, view, and interact with rest
 
 
 ### Team Name: Syntax Error
-### Group Members: 
+### Group Members and Roles: 
 Chase Garner, Torsa Rahman (Backend Developers),
 Katelyn Fernandes, Hiba Ayub (Documentation),
 Jocelyn Pineda, Myonni Bailey (Frontend Developers)
