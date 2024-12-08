@@ -4,10 +4,13 @@ A web-based application that allows users to share, view, and interact with rest
 
 
 ### Team Name: Syntax Error
-### Group Members: Chase Garner, Torsa Rahman, Katelyn Fernandes, Hiba Ayub, Jocelyn Pineda, Myonni Bailey
+### Group Members: 
+Chase Garner, Torsa Rahman (Backend Developers),
+Katelyn Fernandes, Hiba Ayub (Documentation),
+Jocelyn Pineda, Myonni Bailey (Frontend Developers)
 
 - Contact Us: katelynfernandes0@gmail.com, 
-  hibaayub04@gmail.com
+  hibaayub04@gmail.com, jp11455@uga.edu, myonnibailey@gmail.com, Chase.Garner@uga.edu, Torsarahman31@gmail.com
 
 
 ---
