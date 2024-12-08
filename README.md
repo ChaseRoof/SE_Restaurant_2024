@@ -7,7 +7,7 @@ A web-based application that allows users to share, view, and interact with rest
 ### Group Members: Chase Garner, Torsa Rahman, Katelyn Fernandes, Hiba Ayub, Jocelyn Pineda, Myonni Bailey
 
 - Contact Us: katelynfernandes0@gmail.com
-- Contact Us: hibaayub04@gmail.com
+- hibaayub04@gmail.com
 
 
 ---
