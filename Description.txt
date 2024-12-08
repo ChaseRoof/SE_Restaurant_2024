@@ -1,1 +1,1 @@
-Social Media App that allows you to connect with others to share restaurant recommendations.
+Social Media App that allows you to connect with others by sharing restaurant recommendations. 
